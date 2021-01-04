@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Air India Portal</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/ico" href="{% static 'images/logo.png' %}" />
+	
+	<!-- Links for Base Page -->
+	<link rel="stylesheet" href="{% static 'Base_Page/css/main.css' %}" />
+	<link rel="stylesheet" href="{% static 'Base_Page/css/w3.css' %}" />
+	<link rel="stylesheet" href="{% static 'Base_Page/bootstrap/css/bootstrap.css' %}" />
+	<link rel="stylesheet" href="{% static 'Base_Page/css/font-awesome-4.7.0/css/font-awesome.css' %}" />
+
+	<!-- Links for Error Page -->
+	<link type="text/css" rel="stylesheet" href="{% static 'Error_404_Page/css/error_404.css' %}" />
+
+	<!-- Links for Messages Page -->
+	<link rel="stylesheet" href="{% static 'Messages/css/bootstrap.css' %}" />
+	
+</head>
+<body>
+
+	<!-- Header -->
+	{% include 'partials/_header.html' %}
+
+	<!-- Navbar -->
+	{% include 'partials/_navbar.html' %}
+	
+	{% block content %} {% endblock %}
+
+	<!-- Footer -->
+	{% include 'partials/_footer.html' %}
+	
+	<!-- Scripts for Base_Page -->
+	<script src="{% static 'Base_Page/js/main.js' %}"></script>
+
+	<!-- Scripts for F.A.Q Page -->
+	<script type="text/javascript" src="{% static 'Faq_Page/js/jquery-1.10.2.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'Faq_Page/bootstrap/js/bootstrap.min.js' %}"></script>
+
+	<!-- Scripts for Query_Page -->
+	<script src="{% static 'Query_Page_v2/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'Query_Page_v2/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'Query_Page_v2/js/main.js' %}"></script>
+
+	<!-- Scripts for Query_Table Page -->
+	<script src="{% static 'Query_Table_Page/js/main.js' %}"></script>
+
+	<!-- Scripts for Message Fade Out -->
+	<script src="{% static 'js/main.js' %}"></script>
+	
+</body>
+</html>

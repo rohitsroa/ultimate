@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Query_Page_v2/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'Query_Page_v2/css/util.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'Query_Page_v2/css/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'Query_Page_v2/js/select2/select2.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'Base_Page/css/w3.css' %}" />
+
+<!--Status Page Start-->
+<div class="w3-row w3-margin-top"  >
+
+<div class="container-contact100">
+    <div class="wrap-contact100">
+        <span class="contact100-form-title">
+            Your Ticket Info 
+        </span>
+        <div class="wrap-input100 validate-input bg1">
+            <span class="label-input100"><strong>Full Name : </strong></span>
+            {{ name }}
+        </div>
+        <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
+            <span class="label-input100">Email Id : </span>
+            {{ email }}
+        </div>
+        <div class="wrap-input100 bg1 rs1-wrap-input100">
+            <span class="label-input100">Contact Number : </span>
+            {{ phone }}
+        </div>
+        <div class="wrap-input100 input100-select bg1">
+            <span class="label-input100">Department : </span>
+            {{ service }}
+        </div>
+        <div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+            <span class="label-input100">Message</span>
+            <textarea class="input100" name="message" placeholder="Your message here...">{{ message }}</textarea>   
+        </div>
+        <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
+            <span class="label-input100">Date/Time Created : </span>
+            {{ date }}
+        </div>
+        <div class="wrap-input100 bg1 rs1-wrap-input100">
+            <span class="label-input100">Solved : </span>
+            {{ status }}
+        </div>
+        <div class="container-contact100-form-btn">
+            <button class="contact100-form-btn" type="submit">
+                <span>Send us a Reminder&nbsp;<i class="fa fa-bell" aria-hidden="true"></i></span>
+            </button>
+        </div>
+    </div>
+</div>
+
+</div>
+<!--Status Page End-->
+
+{% endblock %}

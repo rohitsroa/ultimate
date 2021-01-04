@@ -1,0 +1,20 @@
+    w3-row {
+        width: 800px;
+        position: relative;
+        left: 17%;
+        z-index: -1;
+    }
+
+    .card {
+        width: 32%;
+        float: left;
+        border: 3px solid rgb(168, 167, 167);
+    }
+
+    @media screen and (max-width:600px) {
+        .card {
+            // float:none;
+            display: block;
+            width: 100%;
+        }
+    }

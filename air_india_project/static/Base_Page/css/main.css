@@ -1,0 +1,98 @@
+﻿        @font-face{
+            font-family: MerriWeather;
+            src:url(../fonts/Merriweather-Regular.ttf) format('truetype');
+        }
+        @font-face{
+            font-family: Lobster;
+            src:url(../fonts/Lobster-Regular.ttf) format('truetype');
+        }
+        body{
+            font-family: MerriWeather;
+            font-size:125%;
+
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family: MerriWeather;
+           // font-size:145%;
+            color:rgb(29, 157, 95);
+        }
+        p{
+            font-family: MerriWeather;
+            font-size:125%;
+        }
+        #mySidebar{
+                width:0px;
+                transition:0.5s ease-in-out; 
+                position:absolute; 
+                top:0;
+                overflow-y:auto;
+            }
+        .bar1, .bar2, .bar3 {
+            background-color: black;
+            margin-bottom: 3px;
+            height: 3px;
+            width: 20px;
+            transition: 0.5s;
+        }
+
+        .change .bar1 {
+            transform: rotate(-45deg) translateY(5px) translateX(-3px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: rotate(45deg) translateY(-4px) translateX(-3px);
+        }
+
+        .icon {
+            transition: 0.5s;
+        }
+
+        .icon:hover {
+           transform: rotate(360deg);
+                
+        }
+
+        #topbtn {
+            display: none;
+            height: 50px;
+            width: 50px;
+            background-color: rgba(0, 0, 0, 0.61);
+            font-size: 15px;
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-size: 25px;
+            z-index: 1;
+            box-shadow: 1px 1px 5px 1px white;
+        }
+
+            #topbtn:hover {
+                background-color: rgba(20, 129, 59, 0.19);
+            }
+            img{
+                height:200px;
+                width:200px;
+            }
+            .sticky{
+                position:fixed;
+                top:0;
+                width:100%;
+            }
+             #mySidebar{
+                width:0px;
+                transition:0.5s ease-in-out; 
+                position:absolute; 
+                top:0;
+                overflow-y:auto;
+            }
+            .iconbar{
+                background-color: rgb(29, 29, 29);
+            }

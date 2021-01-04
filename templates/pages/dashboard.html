@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'Base_Page/css/w3.css' %}" />
+
+<!-- Dashboard Body Start -->
+    <div class="w3-row w3-margin-top"  >
+        <div class="w3-col l12 w3-center" style="font-size:150%;">
+            <h1 style="font-size:200%;">How can we help u today?</h1>
+        </div>
+            <font style="font-family: 'Times New Roman', Times, serif">
+                <p>
+                    Please Look into F.A.Q First for basic problem solutions before submitting a Ticket.<br>
+                    Thanks!<br>
+                    
+                    &nbsp;Welcome<b>&nbsp;{{ User.userid }}
+                    
+                    <br><br><br><br><br><br><br><br><br><br><br>
+                </p>
+            </font>   
+    </div>
+<!-- Dashboard Body End -->
+
+{% endblock %}

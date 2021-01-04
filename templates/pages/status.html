@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Query_Page_v2/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'Query_Page_v2/css/util.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'Query_Page_v2/css/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'Query_Page_v2/js/select2/select2.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'Base_Page/css/w3.css' %}" />
+
+<!--Status Page Start-->
+<div class="w3-row w3-margin-top"  >
+
+<div class="container-contact100">
+    
+    <div class="wrap-contact100">
+        <form class="contact100-form validate-form"  method="POST" action="/get_query">
+            {% csrf_token %}
+            {% include 'partials/_alerts.html' %}
+            <span class="contact100-form-title">
+                Check Status
+            </span>
+
+            <div class="wrap-input100 validate-input bg1">
+                <span class="label-input100">Ticket Number :</span>
+                <input class="input100" type="text" name="query_number" placeholder="Enter Your Ticket Number">
+            </div>
+            {% if user.is_authenticated %}
+    
+            <div class="container-contact100-form-btn">
+                <button class="contact100-form-btn">
+                    <span>
+                        Submit
+                        <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                    </span>
+                </button>
+            </div>
+
+            {% else %}
+             <div class="container-contact100-form-btn">
+                    <a href="{% url 'user_login' %}" class="contact100-form-btn" style="text-decoration:none !important; color:white">&nbsp;&nbsp;&nbsp;Please Login to Check Status<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i></a>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+</div>
+
+</div>
+<!--Status Page End-->
+
+{% endblock %}
